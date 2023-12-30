@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esercizio2</title>
+    <style>
+      * {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        box-sizing: border-box;
+      }
+      #addText {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10%;
+        font-size: 50px;
+      }
+      section {
+        display: flex;
+        justify-content: center;
+      }
+      a {
+        height: 5vh;
+        width: 15vh;
+        border: 3px solid #89a0d9;
+        background-color: transparent;
+        color: #89a0d9;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+        margin: auto;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        margin-top: 10%;
+      }
+      p {
+        font-size: 20px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p style="text-align: center">
+      Inserisci testo in un div: Usa JavaScript per aggiungere del testo
+      all'interno di un div esistente.
+    </p>
+    <div id="addText">Test</div>
+    <section>
+      <a href="./esercizio1.html">Previous Exercise</a>
+      <a href="./esercizi.html">Index</a>
+      <a href="./esercizio3.html">Next Exercise</a>
+    </section>
+    <script>
+      //2. Inserisci testo in un div: Usa JavaScript per aggiungere del testo all'interno di un div esistente.
+      let add = document.getElementById("addText");
+
+      add.innerText = "prova andata";
+    </script>
+  </body>
+</html>
