@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esercizio5</title>
+    <style>
+      * {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        box-sizing: border-box;
+      }
+      section {
+        display: flex;
+        justify-content: center;
+      }
+      a {
+        height: 5vh;
+        width: 15vh;
+        border: 3px solid #89a0d9;
+        background-color: transparent;
+        color: #89a0d9;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: center;
+        margin: auto;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        margin-top: 10%;
+      }
+      p {
+        font-size: 20px;
+        text-align: center;
+      }
+      h1 {
+        margin-top: 10%;
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <p style="text-align: center" font-size: 26px>
+      Cambia stile al passaggio del mouse: Modifica lo stile di un elemento
+      (come il colore del testo) quando il mouse passa sopra di esso.
+    </p>
+    <h1>Passa con il mouse</h1>
+    <section>
+      <a href="./esercizio4.html">Previous Exercise</a>
+      <a href="./esercizi.html">Index</a>
+      <a href="./esercizio6.html">Next Exercise</a>
+    </section>
+    <script>
+      let myTitle = document.querySelector("h1");
+      function onHover() {
+        myTitle.addEventListener("mouseover", function () {
+          myTitle.style.color = "red";
+        });
+      }
+      onHover();
+    </script>
+  </body>
+</html>
