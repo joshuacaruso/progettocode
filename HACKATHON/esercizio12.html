@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Esercizio11</title>
+    <title>Esercizio12</title>
   </head>
   <style>
     * {
@@ -12,8 +12,8 @@
         sans-serif;
       box-sizing: border-box;
     }
-    #paragraph {
-      display: flex;
+    ul {
+      display: grid;
       justify-content: center;
       align-items: center;
       margin-top: 10%;
@@ -44,31 +44,38 @@
       font-size: 20px;
       text-align: center;
     }
-    .class{
-        color: orange;
-        border: 5px solid black;
-        border-radius: 25px;
+    .highlight {
+      color: red;
     }
   </style>
   <body>
     <p>
-        Aggiungi classe CSS con evento: Aggiungi una classe CSS a un
-        elemento in risposta a un evento, come un clic
+      Evidenzia elemento al passaggio del mouse: Quando il mouse passa sopra gli
+      elementi di un elenco, evidenzia l'elemento sotto il cursore.
     </p>
-    <p style="cursor: pointer;" id="paragraph">Click here</p></div>
+    <ul>
+      <li onmouseover="highlight(this)" onmouseout="removeHighlight(this)">
+        Element1
+      </li>
+      <li onmouseover="highlight(this)" onmouseout="removeHighlight(this)">
+        Element2
+      </li>
+      <li onmouseover="highlight(this)" onmouseout="removeHighlight(this)">
+        Element3
+      </li>
+    </ul>
     <section>
-      <a href="./esercizio10.html">Previous Exercise</a>
+      <a href="./esercizio11.html">Previous Exercise</a>
       <a href="./esercizi.html">Index</a>
-      <a href="./esercizio12.html">Next Exercise</a>
+      <a href="./esercizio13.html">Next Exercise</a>
     </section>
     <script>
-let para=document.getElementById('paragraph');
-function onClick(){
-  para.addEventListener('click', function(){
-    para.classList.add('class');
-  })
-}
-onClick();
+      function highlight(x) {
+        x.classList.add("highlight");
+      }
+      function removeHighlight(x) {
+        x.classList.remove("highlight");
+      }
     </script>
   </body>
 </html>

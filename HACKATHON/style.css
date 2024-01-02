@@ -16,6 +16,12 @@ nav {
   margin: auto;
   margin-left: 8vh;
 }
+
+@media only screen and (max-width: 600px) {
+  a {
+    display: none;
+  }
+}
 a {
   color: #212121;
   text-decoration: none;

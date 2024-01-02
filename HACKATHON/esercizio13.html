@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Esercizio11</title>
+    <title>Esercizio13</title>
   </head>
   <style>
     * {
@@ -12,12 +12,10 @@
         sans-serif;
       box-sizing: border-box;
     }
-    #paragraph {
-      display: flex;
+    ul {
+      display: grid;
       justify-content: center;
       align-items: center;
-      margin-top: 10%;
-      font-size: 50px;
     }
     section {
       display: flex;
@@ -44,31 +42,39 @@
       font-size: 20px;
       text-align: center;
     }
-    .class{
-        color: orange;
-        border: 5px solid black;
-        border-radius: 25px;
+    div {
+      display: flex;
+      justify-content: center;
+      margin-top: 10%;
     }
   </style>
   <body>
     <p>
-        Aggiungi classe CSS con evento: Aggiungi una classe CSS a un
-        elemento in risposta a un evento, come un clic
+      Lista dinamica con input e bottone: Crea una lista nella quale gli utenti
+      possono aggiungere elementi tramite un campo di input e un bottone.
     </p>
-    <p style="cursor: pointer;" id="paragraph">Click here</p></div>
+    <div>
+      <input type="text" id="newItem" />
+      <button id="btn">Add</button>
+    </div>
+    <ul id="list"></ul>
     <section>
-      <a href="./esercizio10.html">Previous Exercise</a>
+      <a href="./esercizio12.html">Previous Exercise</a>
       <a href="./esercizi.html">Index</a>
-      <a href="./esercizio12.html">Next Exercise</a>
+      <a href="./esercizio14.html">Next Exercise</a>
     </section>
     <script>
-let para=document.getElementById('paragraph');
-function onClick(){
-  para.addEventListener('click', function(){
-    para.classList.add('class');
-  })
-}
-onClick();
+      function onClickAdd() {
+        const itemInput = document.getElementById("newItem");
+        const valueInput = itemInput.value;
+        let newLine = document.createElement("li");
+        let newData = document.getElementById("list");
+        newLine.innerText = valueInput;
+        newData.append(newLine);
+        itemInput.value = "";
+      }
+      let btn = document.getElementById("btn");
+      btn.onclick = onClickAdd;
     </script>
   </body>
 </html>
