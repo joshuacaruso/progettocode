@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Esercizio1</title>
+    <title>Esercizio15</title>
   </head>
   <style>
     * {
@@ -14,13 +14,6 @@
     }
     body {
       background-color: #e3eef8;
-    }
-    #colorchange {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 10%;
-      font-size: 50px;
     }
     section {
       display: flex;
@@ -47,21 +40,33 @@
       font-size: 20px;
       text-align: center;
     }
+    div {
+      height: 100px;
+      width: 100px;
+      margin: auto;
+      margin-top: 10%;
+      border: 1px solid orange;
+    }
   </style>
   <body>
-    <p style="text-align: center" font-size: 26px>
-      Cambia il colore di sfondo di un elemento: Modifica il colore di sfondo di
-      un div o di un altro elemento HTML tramite JavaScript.
+    <p>
+      Cambia colore di sfondo al mouseout: Cambia il colore di sfondo di un
+      elemento quando il cursore lascia l'area dell'elemento.
     </p>
-    <div id="colorchange">&nbsp;</div>
+    <div id="colorize"></div>
     <section>
-      <a href="./index.html">Previous Exercise</a>
+      <a href="./esercizio14.html">Previous Exercise</a>
       <a href="./esercizi.html">Index</a>
-      <a href="./esercizio2.html">Next Exercise</a>
+      <a href="./esercizio16.html">Next Exercise</a>
     </section>
     <script>
-      let div = document.getElementById("colorchange");
-      div.style.backgroundColor = "#89a0d9";
+      let mouseOut = document.getElementById("colorize");
+      mouseOut.addEventListener("mouseout", function () {
+        mouseOut.style.backgroundColor = "orange";
+      });
+      mouseOut.addEventListener("mouseover", function () {
+        mouseOut.style.backgroundColor = "#e3eef8";
+      });
     </script>
   </body>
 </html>

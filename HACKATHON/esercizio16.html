@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Esercizio1</title>
+    <title>Esercizio16</title>
   </head>
   <style>
     * {
@@ -14,13 +14,6 @@
     }
     body {
       background-color: #e3eef8;
-    }
-    #colorchange {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 10%;
-      font-size: 50px;
     }
     section {
       display: flex;
@@ -47,21 +40,37 @@
       font-size: 20px;
       text-align: center;
     }
+    div {
+      margin-top: 10%;
+    }
+    img {
+      display: flex;
+      margin: auto;
+      width: 50%;
+      height: 50%;
+    }
   </style>
   <body>
-    <p style="text-align: center" font-size: 26px>
-      Cambia il colore di sfondo di un elemento: Modifica il colore di sfondo di
-      un div o di un altro elemento HTML tramite JavaScript.
+    <p>
+      Modifica immagine al passaggio del mouse su un'altra: Cambia un'immagine
+      visualizzata quando l'utente passa il mouse su un'altra immagine.
     </p>
-    <div id="colorchange">&nbsp;</div>
+    <div>
+      <img src="./img/v5.png" />
+    </div>
     <section>
-      <a href="./index.html">Previous Exercise</a>
+      <a href="./esercizio15.html">Previous Exercise</a>
       <a href="./esercizi.html">Index</a>
-      <a href="./esercizio2.html">Next Exercise</a>
+      <a href="./esercizio16+1.html">Next Exercise</a>
     </section>
     <script>
-      let div = document.getElementById("colorchange");
-      div.style.backgroundColor = "#89a0d9";
+      const img = document.querySelector("img");
+      img.addEventListener("mouseover", function () {
+        img.src = "./img/9.png";
+      });
+      img.addEventListener("mouseout", function () {
+        img.src = "./img/v5.png";
+      });
     </script>
   </body>
 </html>

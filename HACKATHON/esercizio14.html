@@ -12,6 +12,9 @@
         sans-serif;
       box-sizing: border-box;
     }
+    body {
+      background-color: #e3eef8;
+    }
     section {
       display: flex;
       justify-content: center;
@@ -55,6 +58,7 @@
       <p>Add cliccato: <span id="counteradd">0 volte</span></p>
       <button id="btnsubtract">Subtract</button>
       <p>Subtract cliccato: <span id="countersubtract">0 volte</span></p>
+      <div><button id="reset">Reset</button></div>
     </div>
     <section>
       <a href="./esercizio13.html">Previous Exercise</a>
@@ -70,6 +74,7 @@
       const btnsubtract = document.getElementById("btnsubtract");
       const countAddDisplay = document.getElementById("counteradd");
       const countSubtractDisplay = document.getElementById("countersubtract");
+      const resetBtn = document.getElementById("reset");
       btnadd.addEventListener("click", function () {
         count++;
         countAdd++;
@@ -101,6 +106,15 @@
         } else if (count === 0) {
           number.style.color = "black";
         }
+      });
+      resetBtn.addEventListener("click", function () {
+        count = 0;
+        countAdd = 0;
+        countSubtract = 0;
+        number.textContent = count;
+        countAddDisplay.textContent = countAdd;
+        countSubtractDisplay.textContent = countSubtract;
+        number.style.color = "black";
       });
     </script>
   </body>
