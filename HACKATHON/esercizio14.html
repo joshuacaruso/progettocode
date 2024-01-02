@@ -80,6 +80,11 @@
         } else if (countAdd > 1) {
           countAddDisplay.textContent = countAdd + " volte";
         }
+        if (count > 0) {
+          number.style.color = "green";
+        } else if (count === 0) {
+          number.style.color = "black";
+        }
       });
       btnsubtract.addEventListener("click", function () {
         count--;
@@ -90,6 +95,11 @@
           countSubtractDisplay.textContent = countSubtract + " volta";
         } else {
           countSubtractDisplay.textContent = countSubtract + " volte";
+        }
+        if (count < 0) {
+          number.style.color = "red";
+        } else if (count === 0) {
+          number.style.color = "black";
         }
       });
     </script>
