@@ -41,7 +41,7 @@ a {
 }
 #btn {
   margin: auto;
-  margin-right: 10vh;
+  margin-right: 5vh;
 }
 #btn1 {
   height: 5vh;
@@ -96,4 +96,5 @@ input {
   color: #fde7d7;
   font-size: 13px;
   font-weight: 500;
+  cursor: pointer;
 }

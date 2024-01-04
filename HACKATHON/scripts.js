@@ -21,8 +21,7 @@ function removeOnClick() {
 function replaceOnClick() {
   newTitle.innerHTML = "Test riuscito";
   newButton.innerHTML = "Controlla gli esercizi";
-  document.body.appendChild(newTitle);
-  document.body.appendChild(newButton);
+  document.body.append(newTitle, newButton);
   newTitle.style.display = "grid";
   newTitle.style.marginTop = "30vh";
   newButton.style.margin = "auto";
