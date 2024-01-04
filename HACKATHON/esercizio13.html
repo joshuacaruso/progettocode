@@ -67,14 +67,26 @@
       <a href="./esercizio14.html">Next Exercise</a>
     </section>
     <script>
+      const itemInput = document.getElementById("newItem");
+
       function onClickAdd() {
-        const itemInput = document.getElementById("newItem");
-        const valueInput = itemInput.value;
-        let newLine = document.createElement("li");
-        let newData = document.getElementById("list");
-        newLine.innerText = valueInput;
-        newData.append(newLine);
-        itemInput.value = "";
+        let valueInput = itemInput.value;
+        let space = document.createTextNode("\u2003" + "\u2003" + "\u2003");
+        let trash = document.createElement("span");
+        let iconTrash = "🗑️";
+        trash.style.cursor = "pointer";
+        if (valueInput !== "") {
+          trash.append(iconTrash);
+          let newLine = document.createElement("li");
+          let newData = document.getElementById("list");
+          newLine.innerText = valueInput;
+          newData.append(newLine);
+          newLine.append(space, trash);
+          itemInput.value = "";
+          trash.addEventListener("click", function () {
+            newLine.remove();
+          });
+        }
       }
       let btn = document.getElementById("btn");
       btn.onclick = onClickAdd;
