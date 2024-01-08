@@ -63,7 +63,7 @@
     </p>
     <div>
       <button id="btn">Hide/Show</button>
-      <p style="display: block" id="paragraph">dfsd</p>
+      <p style="display: block" id="paragraph">Nascondi/Mostra</p>
     </div>
     <section>
       <a href="./esercizio5.html">Previous Exercise</a>
@@ -75,11 +75,9 @@
       let para = document.getElementById("paragraph");
       function onClick() {
         play.addEventListener("click", function () {
-          if (para.style.display === "block") {
-            para.style.display = "none";
-          } else {
-            para.style.display = "block";
-          }
+          para.style.display === "block"
+            ? (para.style.display = "none")
+            : (para.style.display = "block");
         });
       }
       onClick();

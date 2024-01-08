@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esercizio19</title>
+  </head>
+  <style>
+    * {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #e3eef8;
+    }
+    section {
+      display: flex;
+      justify-content: center;
+    }
+    a {
+      height: 5vh;
+      width: 15vh;
+      border: 3px solid #89a0d9;
+      background-color: transparent;
+      color: #89a0d9;
+      font-size: 15px;
+      font-weight: 500;
+      text-align: center;
+      margin: auto;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      margin-top: 10%;
+    }
+    p {
+      font-size: 20px;
+      text-align: center;
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      margin-top: 10%;
+    }
+  </style>
+  <body>
+    <p>
+      Cambia testo con input: Modifica il testo di un elemento HTML in base a
+      ciò che l'utente digita in un campo di input.
+    </p>
+    <div>
+      <input
+        type="text"
+        id="newItem"
+        placeholder="scrivi"
+        oninput="changeText()"
+      />
+      <span id="el">Paragrafo</span>
+    </div>
+
+    <section>
+      <a href="./esercizio18.html">Previous Exercise</a>
+      <a href="./esercizi.html">Index</a>
+      <a href="./esercizio20.html">Next Exercise</a>
+    </section>
+    <script>
+      function changeText() {
+        let input = document.getElementById("newItem").value;
+        let para = document.getElementById("el");
+        para.innerHTML = input;
+      }
+    </script>
+  </body>
+</html>

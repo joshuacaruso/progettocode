@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Esercizio20</title>
+  </head>
+  <style>
+    * {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #e3eef8;
+    }
+    section {
+      display: flex;
+      justify-content: center;
+    }
+    a {
+      height: 5vh;
+      width: 15vh;
+      border: 3px solid #89a0d9;
+      background-color: transparent;
+      color: #89a0d9;
+      font-size: 15px;
+      font-weight: 500;
+      text-align: center;
+      margin: auto;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      margin-top: 10%;
+    }
+    p {
+      font-size: 20px;
+      text-align: center;
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      margin-top: 10%;
+    }
+    #el {
+      display: flex;
+    }
+  </style>
+  <body>
+    <p>
+      Controllo visibilità con checkbox: Usa una checkbox per controllare la
+      visibilità di un elemento HTML.
+    </p>
+    <div>
+      <label>mostra/nascondi tag p</label>
+      <input type="checkbox" id="input" onchange="changeDisplay()" />
+      <span id="el">compare/scompare</span>
+    </div>
+
+    <section>
+      <a href="./esercizio19.html">Previous Exercise</a>
+      <a href="./esercizi.html">Index</a>
+      <a href="./esercizio21.html">Next Exercise</a>
+    </section>
+    <script>
+      function changeDisplay() {
+        let input = document.getElementById("input");
+        let span = document.getElementById("el");
+        input.checked =
+          span.style.display === "none"
+            ? (span.style.display = "block")
+            : (span.style.display = "none");
+      }
+    </script>
+  </body>
+</html>
