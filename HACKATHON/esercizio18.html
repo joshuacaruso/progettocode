@@ -79,10 +79,10 @@
       const ballWidth = ball.offsetWidth;
       const movement = divWidth - ballWidth;
       function moveToLeft() {
-        ball.style.transform = `translateX(-${movement / 2}px)`;
+        ball.style.transform = 'translateX(' + (-movement / 2) + 'px)';
       }
       function moveToRight() {
-        ball.style.transform = `translateX(${movement / 2}px)`;
+        ball.style.transform = `translateX(`+(movement / 2)+`px)`;
       }
     </script>
   </body>
